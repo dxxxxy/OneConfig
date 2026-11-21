@@ -29,7 +29,7 @@ package org.polyfrost.oneconfig.api.ui.v1.api;
 import java.util.ServiceLoader;
 
 final class TinyFdHolder {
-    static final TinyFdApi INSTANCE = ServiceLoader.load(TinyFdApi.class, TinyFdApi.class.getClassLoader()).iterator().next();
+    static final TinyFdApi INSTANCE = OneClientDialogs.wrap(ServiceLoader.load(TinyFdApi.class, TinyFdApi.class.getClassLoader()).iterator().next());
 
     private TinyFdHolder() {
     }
